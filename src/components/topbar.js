@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Topbar = ({ foods }) => {
+const Topbar = ({ message, bookmark }) => {
   return (
         <div className="topbar bg-white text-primary shadow-sm" id="topbar">
             <div className="d-flex justify-content-between justify-content-md-start flex-md-row-reverse">
@@ -18,16 +18,32 @@ const Topbar = ({ foods }) => {
                             <li><a className="dropdown-item h5 fw-light" href="#">Logout</a></li>
                         </ul>
                     </div>
-                    <p className="p-4 h5 ">Ichasn Nur</p>
+                    <p className="p-4 h5 text-nowrap">Ichasn Nur</p>
                 </div>
-                <div className="d-flex h4 text-primary me-4 gap-3">
-                    <a href="#" className="btn btn-light align-self-center"> <i className="fa-regular fa-message"></i></a>
-                    <a href="#" className=" align-self-center btn"><i className="fa-regular fa-bell"></i></a>
+                <div className="d-flex">
+                    <a href="#" className="btn  align-self-center">
+                        <button type="button" class="btn position-relative">
+                    <   FontAwesomeIcon icon="message" />
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {message}
+                            <span class="visually-hidden">Message</span>
+                        </span>
+                        </button>
+                    </a>
+                    <a href="#" className="btn  align-self-center">
+                        <button type="button" class="btn position-relative">
+                    <   FontAwesomeIcon icon="bookmark" />
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {bookmark}
+                            <span class="visually-hidden">bookmark</span>
+                        </span>
+                        </button>
+                    </a>
                 </div>
 
-                <div className="input-group align-self-center mb-4 px-4">
+                <div className="input-group align-self-center mb-2 px-4">
+                    <span className="input-group-text" id="basic-addon1"><FontAwesomeIcon icon="magnifying-glass" /></span>
                     <input type="text" className="form-control" placeholder="Mau cari apa" aria-label="Mau cari apa" aria-describedby="basic-addon1" />
-                    <span className="input-group-text" id="basic-addon1"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> Cari</span>
                 </div>
             </div>
         </div>

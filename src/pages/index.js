@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <Sidebar/>
-      <Topbar/>
+      <Topbar bookmark={foods.length} message={2}/>
       <div className="content">
       <div className="row">
         <div className="col-md-8">
@@ -25,7 +25,7 @@ export default function Home() {
                   <a href="#" className="btn btn-sm btn-success rounded-5 px-4">Sought after by customer</a>
                   <div className="h1">Incomplete Indomie (without chicken)</div>
                   <div className="h5 my-2">AI Suggestions by Marina</div>
-                  <p>Wanna know the <i>secret recipe</i>? | <a href="#" className="text-decoration-none">See recipe</a></p>
+                  <p>Wanna know the <i>secret recipe</i>? | <a href="#" className="text-decoration-none"><FontAwesomeIcon icon="utensils" /> See recipe</a></p>
                 </div>
               </div>
               <div className="col-3 align-self-center">

@@ -1,4 +1,5 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 export default function MerchantMenu({ menu }) {
 
@@ -14,9 +15,9 @@ export default function MerchantMenu({ menu }) {
 					<div className="" style={{fontSize:'14px', minHeight:'42px'}}>{row.description.length >= 73 ? row.description.substring(0,73)+'...' : row.description}</div>
 					<div className="text-warning fw-bold my-0" style={{fontSize: '11px'}}>On Progress</div>
 					<div className="text-success">Rp{parseFloat(row.price).toLocaleString()}</div>
-					<div className="d-flex gap-2" style={{position:'absolute', top:'10px', right:'10px'}}>
-						<div className="btn btn-danger btn-sm">Delete</div>
-						<div className="btn btn-primary btn-sm">Edit</div>
+					<div className="d-flex gap-2" style={{position:'absolute', top:'15px', right:'10px'}}>
+						<a href='#' className="btn btn-danger rounded-pill"><FontAwesomeIcon  icon={'trash-alt'}/> </a>
+						<a href='#' className="btn btn-primary rounded-pill"><FontAwesomeIcon icon={'pencil-alt'} /></a>
 					</div>
 				</div>
 			</div>
