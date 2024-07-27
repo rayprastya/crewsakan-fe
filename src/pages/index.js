@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import FoodList from '../components/list/FoodList';
-import foods from '../data/foods';
+import FoodList from '@/components/list/FoodList';
+import foods from '@/data/foods';
 import category from '@/data/category';
 import CategoryList from '@/components/list/CategoryList';
 import OrderList from '@/components/list/OrderList';
