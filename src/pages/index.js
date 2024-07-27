@@ -60,13 +60,6 @@ export default function Home() {
             <a href="#" className="text-decoration-none align-self-center">Detail</a>
           </div>
           <hr />
-          <div className=" card">
-            <div className="btn-group">
-              <div className="btn btn-primary btn-sm">Add to Menu</div>
-              <div className="btn btn-outline-primary btn-sm">Save</div>
-              <div className="btn btn-outline-primary btn-sm">Cancel</div>
-            </div>
-          </div>
           <OrderList foods={foods} />
         </div>
       </div>
