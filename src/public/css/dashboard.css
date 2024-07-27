@@ -1,5 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
-
+:root {
+  --primary-color: #009A3A;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
 body {
     margin: 0;
     /* font-family: 'Roboto', sans-serif; */
