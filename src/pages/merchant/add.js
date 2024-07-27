@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Sidebar from '@/components/sidebar';
 import Topbar from '@/components/topbar';
 import MerchantMenuAddComponent from "@/components/MerchantMenuAddComponent";
