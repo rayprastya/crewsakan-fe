@@ -21,23 +21,19 @@ const Topbar = ({ message, bookmark }) => {
                     <p className="p-4 h5 text-nowrap">Ichasn Nur</p>
                 </div>
                 <div className="d-flex">
-                    <a href="#" className="btn  align-self-center">
-                        <button type="button" class="btn position-relative">
+                    <a href="#" className="btn position-relative align-self-center">
                     <   FontAwesomeIcon icon="message" />
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {message}
                             <span class="visually-hidden">Message</span>
                         </span>
-                        </button>
                     </a>
-                    <a href="#" className="btn  align-self-center">
-                        <button type="button" class="btn position-relative">
+                    <a href="#" className="btn position-relative align-self-center">
                     <   FontAwesomeIcon icon="bookmark" />
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {bookmark}
                             <span class="visually-hidden">bookmark</span>
                         </span>
-                        </button>
                     </a>
                 </div>
 
