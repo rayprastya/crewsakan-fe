@@ -116,6 +116,13 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  .desc-hover {
+    height: 0px;
+    transition: height .2s;
+  }
+  .desc-hover:hover {
+    height: 100%;
+  }
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100%;

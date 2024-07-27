@@ -9,7 +9,8 @@ const RecomendationList = ({ foods }) => {
                 <img src={food.image} className='w-100' alt="" />
                 <span className="fw-bold" style={{position:'absolute', left:'10px', bottom:'10px'}}>
                     {food.name} <br className='my-1'/>
-                    <span className="text-white bg-warning px-2 py-1" style={{fontSize:'10px'}}>Sulit</span>
+                    <span className="text-white bg-warning px-2 py-1" style={{fontSize:'10px'}}>Hard</span> <br />
+                    <span style={{fontSize:'10px'}}>10 Min</span>
                 </span>
             </div>
         ))}
