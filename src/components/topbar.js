@@ -26,7 +26,7 @@ const Topbar = ({ foods }) => {
 
                 <div className="input-group align-self-center mb-4 px-4">
                     <span className="input-group-text" id="basic-addon1"><i className="fas fa-utensils"></i></span>
-                    <input type="text" className="form-control" placeholder="Mau cari apa" aria-label="Mau cari apa" aria-describedby="basic-addon1" />
+                    <input type="text" className="form-control" placeholder="I want to see..." aria-label="Mau cari apa" aria-describedby="basic-addon1" />
                 </div>
             </div>
         </div>

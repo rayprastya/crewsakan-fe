@@ -1,43 +1,43 @@
 const category = [
       {
         "id": 1,
-        "name": "Makanan Cepat Saji"
+        "name": "Fast Food"
       },
       {
         "id": 2,
-        "name": "Makanan Penutup"
+        "name": "Desserts"
       },
       {
         "id": 3,
-        "name": "Minuman"
+        "name": "Drinks"
       },
       {
         "id": 4,
-        "name": "Makanan Tradisional"
+        "name": "Traditional Food"
       },
       {
         "id": 5,
-        "name": "Makanan Barat"
+        "name": "Western Cuisine"
       },
       {
         "id": 6,
-        "name": "Makanan Asia"
+        "name": "Oriental Cuisine"
       },
       {
         "id": 7,
-        "name": "Makanan Vegetarian"
+        "name": "For Vegetarians"
       },
       {
         "id": 8,
-        "name": "Seafood"
+        "name": "Seafood-products"
       },
       {
         "id": 9,
-        "name": "Makanan Sehat"
+        "name": "Healthy Food"
       },
       {
         "id": 10,
-        "name": "Cemilan"
+        "name": "Snacks"
       }
     ]
 

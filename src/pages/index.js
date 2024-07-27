@@ -22,10 +22,10 @@ export default function Home() {
             <div className="w-100 rounded-3 p-4 d-flex bg-danger-subtle shadow-sm">
               <div className="col-9 d-flex justify-content-center flex-column">
                 <div className="align-self-center">
-                  <a href="#" className="btn btn-sm btn-success rounded-5 px-4">Suggest By AI</a>
-                  <div className="h1">Indomie tapi ada ayamnya</div>
-                  <div className="h5 my-2">Banyak dicari tapi tidak ada di jakarta selatan</div>
-                  <p>Kami akan membantu anda membuatnya | <a href="#" className="text-decoration-none">Lihat Resep</a></p>
+                  <a href="#" className="btn btn-sm btn-success rounded-5 px-4">Sought after by customer</a>
+                  <div className="h1">Incomplete Indomie (without chicken)</div>
+                  <div className="h5 my-2">AI Suggestions by Marina</div>
+                  <p>Wanna know the <i>secret recipe</i>? | <a href="#" className="text-decoration-none">See recipe</a></p>
                 </div>
               </div>
               <div className="col-3 align-self-center">
@@ -34,19 +34,19 @@ export default function Home() {
             </div>
 
             <h4 className='ms-2 mb-2 mt-4'>
-              <span className='text-nowrap mx-2'>Makanan yang mungkin laku di daerahmu</span>
+              <span className='text-nowrap mx-2'>Currently trending in your area!</span>
               <hr className="w-100 align-self-center my-2 mx-3" />
             </h4>
             <RecomendationList foods={foods} />
 
             <h4 className='ms-2 mb-2 mt-4'>
-              <span className='text-nowrap mx-2'>Makanan rekomendasi berdasarkan menu yang kamu buat</span>
+              <span className='text-nowrap mx-2'>Recommendations based on your existing menu:</span>
               <hr className="w-100 align-self-center my-2 mx-3" />
             </h4>
             <RecomendationList foods={foods} />
 
             <h4 className='ms-2 mb-2 mt-4'>
-              <span className='text-nowrap mx-2'>Dapur makanan saya</span>
+              <span className='text-nowrap mx-2'>My products:</span>
               <hr className="w-100 align-self-center my-2 mx-3" />
             </h4>
             <CategoryList categorys={category} />
@@ -56,15 +56,15 @@ export default function Home() {
         </div>
         <div className="col-md-4 card">
           <div className="d-flex justify-content-between mt-3">
-            <h5>Order Detail</h5>
+            <h5>Saved recommendations</h5>
             <a href="#" className="text-decoration-none align-self-center">Detail</a>
           </div>
           <hr />
           <div className=" card">
             <div className="btn-group">
-              <div className="btn btn-primary btn-sm">Order</div>
-              <div className="btn btn-outline-primary btn-sm">Selesai</div>
-              <div className="btn btn-outline-primary btn-sm">Batal</div>
+              <div className="btn btn-primary btn-sm">Add to Menu</div>
+              <div className="btn btn-outline-primary btn-sm">Save</div>
+              <div className="btn btn-outline-primary btn-sm">Cancel</div>
             </div>
           </div>
           <OrderList foods={foods} />
