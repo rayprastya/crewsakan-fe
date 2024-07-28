@@ -12,6 +12,9 @@ import Topbar from '@/components/topbar';
 import GetRecommendationsByMerchant from "@/components/getRecommendationsByMerchant";
 import GetOrderList from "@/components/getOrderList";
 
+import menu from "@/data/merchantmenu";
+import MerchantMenu from '@/components/list/MerchantMenu';
+
 export default function Home() {
   const [existingMenu, setMenu] = useState(null);
   const [recommendations, setRec] = useState(null);
@@ -60,7 +63,7 @@ export default function Home() {
             </h4>
             <CategoryList categorys={category} />
 
-            <FoodList foods={foods} />
+            <MerchantMenu menu={menu}/>
           </div>
         </div>
         <div className="col-md-4 card">

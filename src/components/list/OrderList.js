@@ -17,11 +17,7 @@ const OrderList = ({ foods, handleClickState = null }) => {
             <div className="d-flex">
               <img src={'https://via.placeholder.com/150'} style={{height:'100px', width:'100px', borderRadius:'20px'}} alt={food.name} />
               <div className="ms-2 w-100">
-                <div className="fw-bold">{food.recipes}</div>
-                <div className="d-flex w-100 justify-content-between">
-                  <div className="text-warning fw-bold align-self-center" style={{fontSize:'11px'}}>On Progress</div>
-                </div>
-                <div className="text-success">Rp. 20.000</div>
+                <div style={{fontSize:'12px'}}>{food.recipes}</div>
               </div>
             </div>
           </div>
