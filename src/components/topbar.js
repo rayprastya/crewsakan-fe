@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Topbar = ({ message, bookmark }) => {
+const Topbar = () => {
+  const [message, setMessage] = useState(1);
+  const [bookmark, setBookmark] = useState(2)
   return (
         <div className="topbar bg-white text-primary shadow-sm" id="topbar">
             <div className="d-flex justify-content-between justify-content-md-start flex-md-row-reverse">
@@ -20,15 +22,15 @@ const Topbar = ({ message, bookmark }) => {
                     </div>
                     <p className="p-4 h5 text-nowrap">Ichasn Nur</p>
                 </div>
-                <div className="d-flex">
-                    <a href="#" className="btn position-relative align-self-center">
+                <div className="d-flex gap-2">
+                    <a href="#" className="btn btn-sm position-relative align-self-center">
                     <   FontAwesomeIcon icon="message" />
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {message}
                             <span class="visually-hidden">Message</span>
                         </span>
                     </a>
-                    <a href="#" className="btn position-relative align-self-center">
+                    <a href="#" className="btn btn-sm position-relative align-self-center">
                     <   FontAwesomeIcon icon="bookmark" />
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {bookmark}
@@ -37,7 +39,7 @@ const Topbar = ({ message, bookmark }) => {
                     </a>
                 </div>
 
-                <div className="input-group align-self-center mb-2 px-4">
+                <div className="input-group align-self-center mb-2 px-4 d-none d-md-flex">
                     <span className="input-group-text" id="basic-addon1"><FontAwesomeIcon icon="magnifying-glass" /></span>
                     <input type="text" className="form-control" placeholder="Mau cari apa" aria-label="Mau cari apa" aria-describedby="basic-addon1" />
                 </div>

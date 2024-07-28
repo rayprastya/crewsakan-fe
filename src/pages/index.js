@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main>
       <Sidebar/>
-      <Topbar bookmark={foods.length} message={2}/>
+      <Topbar/>
       <div className="content">
       <div className="row">
         <div className="col-md-8">
