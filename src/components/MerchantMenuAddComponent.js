@@ -4,7 +4,7 @@ import React, {useState} from "react";
 export default function MerchantMenuAddComponent() {
 	const [formData, setFormData] = useState({
 		name: '',
-		merchant_id: "0",
+		merchant_id: 1,
 		description: "",
 		price: 0,
 	});
@@ -13,6 +13,21 @@ export default function MerchantMenuAddComponent() {
 		e.preventDefault();
 		const {name, value} = e.target;
 		setFormData({...formData, [name]: value});
+	}
+
+	function handleSubmit(e){
+		e.preventDefault();
+		const newFormData = {...formData, price: parseFloat(formData.price)};
+		fetch(`${process.env.NEXT_PUBLIC_API_URL}/menus`, {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify(newFormData)
+		})
+			.then(res => {
+				if(res.ok){
+					window.location.reload();
+				}
+			})
 	}
 
 	return (
@@ -30,7 +45,7 @@ export default function MerchantMenuAddComponent() {
 					<label htmlFor="price">Price</label>
 					<input onChange={handleEdit} className="form-control" type="number" min={3000} id="price" name="price"/>
 				</div>
-				<button type="submit" className="btn btn-primary">Submit new Product</button>
+				<button className="btn btn-primary" onClick={handleSubmit}>Submit new Product</button>
 			</form>
 		</div>
 	)

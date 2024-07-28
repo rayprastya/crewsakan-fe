@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import FoodList from '@/components/list/FoodList';
 import foods from '@/data/foods';
@@ -9,8 +9,17 @@ import RecomendationList from '@/components/list/RecomendationList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Sidebar from '@/components/sidebar';
 import Topbar from '@/components/topbar';
+import GetRecommendationsByMerchant from "@/components/getRecommendationsByMerchant";
+import GetOrderList from "@/components/getOrderList";
 
 export default function Home() {
+  const [existingMenu, setMenu] = useState(null);
+  const [recommendations, setRec] = useState(null);
+  const [wishlist, setWishlist] = useState(null);
+
+  useEffect(() => {
+    GetRecommendationsByMerchant(1, existingMenu, setMenu, setRec);
+  }, [])
   return (
     <main>
       <Sidebar/>
@@ -43,7 +52,7 @@ export default function Home() {
               <span className='text-nowrap mx-2'>Recommendations based on your existing menu:</span>
               <hr className="w-100 align-self-center my-2 mx-3" />
             </h4>
-            <RecomendationList foods={foods} />
+            <RecomendationList foods={recommendations} />
 
             <h4 className='ms-2 mb-2 mt-4'>
               <span className='text-nowrap mx-2'>My products:</span>

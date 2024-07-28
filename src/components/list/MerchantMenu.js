@@ -6,8 +6,8 @@ export default function MerchantMenu({ menu }) {
 	return (
     <div className="container my-3">
       <div className="row g-1">
-        {menu.map((row, index) => (
-		<div className="col-lg-4 col-md-4" key={index}>
+        {menu?.map((row, index) => (
+		<div className="col-lg-3 col-md-4 col-6" key={index}>
 			<div className="card m-0">
 				<img src={'https://via.placeholder.com/150'} className='card-img-top' alt={row.name}/>
 				<div className="d-flex flex-column card-body">

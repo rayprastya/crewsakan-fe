@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from '@/components/sidebar';
 import Topbar from '@/components/topbar';
@@ -6,8 +6,21 @@ import MerchantMenu from "@/components/list/MerchantMenu";
 import menu from "@/data/merchantmenu";
 import Link from 'next/link'
 import store from '@/data/store';
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default function MerchantMenuView() {
+	const [merchantMenu, setMerchantMenu] = useState(null);
+
+	useEffect(() => {
+		fetch(`${process.env.NEXT_PUBLIC_API_URL}/menus/1`,
+			{method: 'GET',}
+		)
+			.then(res => res.json())
+			.then(data => {
+				setMerchantMenu(data);
+			})
+	}, [])
+
 	return (
 		<main>
 			<Sidebar/>
