@@ -45,7 +45,7 @@ export default function MerchantMenuView() {
 								<Link href="/merchant/add" className="text-decoration-none align-self-center">Add new product</Link>
 							</div>
 							<hr/>
-							<MerchantMenu menu={menu}/>
+							<MerchantMenu menu={merchantMenu}/>
 						</div>
 					</div>
 				</div>

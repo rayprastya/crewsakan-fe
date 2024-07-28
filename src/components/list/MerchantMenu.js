@@ -14,7 +14,7 @@ export default function MerchantMenu({ menu }) {
 					<p className="fw-semibold my-0">{row.name}</p>
 					<div className="" style={{fontSize:'14px', minHeight:'42px'}}>{row.description.length >= 60 ? row.description.substring(0,60)+'...' : row.description}</div>
 					<div className="d-flex gap-1 scrollx">
-					{row.ingredients.map((ingredien, idx) => (
+					{row.ingredients?.map((ingredien, idx) => (
 						<div className="bg-warning rounded px-2 text-white fw-bold my-0" key={idx} style={{fontSize: '11px'}}>{ingredien}</div>
 					))}
 					</div>
